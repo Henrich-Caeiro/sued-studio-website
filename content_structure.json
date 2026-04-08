@@ -1,0 +1,43 @@
+{
+  "company_name": "SUED Studio",
+  "tagline": "Data, Technology & Celestial Aesthetics",
+  "hero_headline": "Redefining Marketing Through Algorithmic Precision",
+  "hero_subheadline": "SUED Studio transforms the chaos of digital marketing into structured, data-driven strategies powered by algorithmic omniscience.",
+  "mission": "We replace guesswork with precision, using the metaphor of the divine to represent data-driven decision making and market authority.",
+  "values": [
+    {
+      "title": "Precision",
+      "description": "Data-driven insights replace assumptions"
+    },
+    {
+      "title": "Authenticity",
+      "description": "Human connection in an AI-saturated market"
+    },
+    {
+      "title": "Celestial Vision",
+      "description": "Seeing invisible patterns through algorithmic analysis"
+    },
+    {
+      "title": "Sacred Geometry",
+      "description": "Harmony between technology and human experience"
+    }
+  ],
+  "services": [
+    {
+      "title": "Strategic Marketing",
+      "description": "Performance-driven strategies integrating SEO, paid media, CRM, and branding"
+    },
+    {
+      "title": "Data Intelligence",
+      "description": "Proprietary data analysis and customer lifetime value modeling"
+    },
+    {
+      "title": "AI-Agnostic Optimization",
+      "description": "Generative Engine Optimization for visibility in AI systems"
+    },
+    {
+      "title": "Brand Authority",
+      "description": "Building trust and legitimacy in algorithmic ecosystems"
+    }
+  ]
+}
