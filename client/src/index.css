@@ -43,76 +43,76 @@
 }
 
 :root {
-  /* Celestial Minimalist Theme - Neon Lime & Dark Navy */
-  --primary: #CDFF00;  /* Neon Lime - Primary accent */
-  --primary-foreground: #0F1419;  /* Deep Navy - Text on lime */
-  --sidebar-primary: #CDFF00;
-  --sidebar-primary-foreground: #0F1419;
-  --chart-1: #CDFF00;
-  --chart-2: #1DB5D8;  /* Celestial Teal */
-  --chart-3: #00E5FF;
-  --chart-4: #CDFF00;
-  --chart-5: #1DB5D8;
-  --radius: 0.25rem;  /* Sharp, geometric edges */
-  --background: #0F1419;  /* Deep Navy */
-  --foreground: #F5F5F5;  /* Cloud White */
-  --card: #1A1F2E;  /* Slightly lighter navy */
-  --card-foreground: #F5F5F5;
-  --popover: #1A1F2E;
-  --popover-foreground: #F5F5F5;
-  --secondary: #1DB5D8;  /* Celestial Teal */
-  --secondary-foreground: #0F1419;
-  --muted: #2D3547;  /* Muted navy */
-  --muted-foreground: #A0A9B8;
-  --accent: #CDFF00;  /* Neon Lime */
-  --accent-foreground: #0F1419;
-  --destructive: #FF4444;
-  --destructive-foreground: #F5F5F5;
-  --border: #2D3547;
-  --input: #1A1F2E;
-  --ring: #CDFF00;
-  --sidebar: #0F1419;
-  --sidebar-foreground: #F5F5F5;
-  --sidebar-accent: #CDFF00;
-  --sidebar-accent-foreground: #0F1419;
-  --sidebar-border: #2D3547;
-  --sidebar-ring: #CDFF00;
+  /* Paleta Celestial do Documento - 2026 */
+  --primary: #20B2AA;  /* Transformative Teal */
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #20B2AA;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #20B2AA;  /* Transformative Teal */
+  --chart-2: #4A90E2;  /* Celestial Blue */
+  --chart-3: #00D9FF;  /* Aurora Cyan */
+  --chart-4: #D4AF37;  /* Celestial Gold */
+  --chart-5: #1A3A52;  /* Cosmic Navy */
+  --radius: 0.5rem;  /* Slightly rounded for elegance */
+  --background: #0F1F2E;  /* Cosmic Navy - Very Dark */
+  --foreground: #F0F4F8;  /* Cloud Dancer - Off-white */
+  --card: #1A2F42;  /* Darker Navy for cards */
+  --card-foreground: #F0F4F8;
+  --popover: #1A2F42;
+  --popover-foreground: #F0F4F8;
+  --secondary: #4A90E2;  /* Celestial Blue */
+  --secondary-foreground: #FFFFFF;
+  --muted: #2D4A5F;  /* Muted Navy */
+  --muted-foreground: #A8B8C8;
+  --accent: #20B2AA;  /* Transformative Teal - Primary accent */
+  --accent-foreground: #FFFFFF;
+  --destructive: #E74C3C;
+  --destructive-foreground: #FFFFFF;
+  --border: #2D4A5F;
+  --input: #1A2F42;
+  --ring: #20B2AA;
+  --sidebar: #0F1F2E;
+  --sidebar-foreground: #F0F4F8;
+  --sidebar-accent: #20B2AA;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2D4A5F;
+  --sidebar-ring: #20B2AA;
 }
 
 .dark {
-  /* Dark mode uses same celestial theme */
-  --primary: #CDFF00;
-  --primary-foreground: #0F1419;
-  --sidebar-primary: #CDFF00;
-  --sidebar-primary-foreground: #0F1419;
-  --background: #0F1419;
-  --foreground: #F5F5F5;
-  --card: #1A1F2E;
-  --card-foreground: #F5F5F5;
-  --popover: #1A1F2E;
-  --popover-foreground: #F5F5F5;
-  --secondary: #1DB5D8;
-  --secondary-foreground: #0F1419;
-  --muted: #2D3547;
-  --muted-foreground: #A0A9B8;
-  --accent: #CDFF00;
-  --accent-foreground: #0F1419;
-  --destructive: #FF4444;
-  --destructive-foreground: #F5F5F5;
-  --border: #2D3547;
-  --input: #1A1F2E;
-  --ring: #CDFF00;
-  --chart-1: #CDFF00;
-  --chart-2: #1DB5D8;
-  --chart-3: #00E5FF;
-  --chart-4: #CDFF00;
-  --chart-5: #1DB5D8;
-  --sidebar: #0F1419;
-  --sidebar-foreground: #F5F5F5;
-  --sidebar-accent: #CDFF00;
-  --sidebar-accent-foreground: #0F1419;
-  --sidebar-border: #2D3547;
-  --sidebar-ring: #CDFF00;
+  /* Dark mode - Paleta Celestial */
+  --primary: #20B2AA;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #20B2AA;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0F1F2E;
+  --foreground: #F0F4F8;
+  --card: #1A2F42;
+  --card-foreground: #F0F4F8;
+  --popover: #1A2F42;
+  --popover-foreground: #F0F4F8;
+  --secondary: #4A90E2;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2D4A5F;
+  --muted-foreground: #A8B8C8;
+  --accent: #20B2AA;
+  --accent-foreground: #FFFFFF;
+  --destructive: #E74C3C;
+  --destructive-foreground: #FFFFFF;
+  --border: #2D4A5F;
+  --input: #1A2F42;
+  --ring: #20B2AA;
+  --chart-1: #20B2AA;
+  --chart-2: #4A90E2;
+  --chart-3: #00D9FF;
+  --chart-4: #D4AF37;
+  --chart-5: #1A3A52;
+  --sidebar: #0F1F2E;
+  --sidebar-foreground: #F0F4F8;
+  --sidebar-accent: #20B2AA;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2D4A5F;
+  --sidebar-ring: #20B2AA;
 }
 
 @layer base {
@@ -196,23 +196,26 @@
     }
   }
 }
-/* Component Styles - Celestial Minimalist Theme */
+/* Component Styles - Paleta Celestial com Efeitos Avançados */
 @layer components {
   .accent-bar {
     @apply bg-accent h-1 w-full;
+    box-shadow: 0 0 30px rgba(32, 178, 170, 0.5);
   }
 
   .constellation-bg {
     background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/pattern-constellation-Xkrt7vXf9WU6crS9ogT8jU.webp');
     background-size: 400px 400px;
     background-attachment: fixed;
-    opacity: 0.08;
+    opacity: 0.12;
   }
+
+
 
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
@@ -220,23 +223,146 @@
     }
   }
 
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
   .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 
   .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(205, 255, 0, 0.2);
+    box-shadow: 0 0 40px rgba(32, 178, 170, 0.4);
+    transition: all 0.4s ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(32, 178, 170, 0.2);
+    transition: all 0.3s ease-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
     transition: all 0.3s ease-out;
   }
 
   .btn-neon {
     @apply bg-accent text-accent-foreground px-6 py-3 font-bold uppercase tracking-wider;
-    transition: all 0.3s ease-out;
-    box-shadow: 0 0 0 2px #0F1419, 0 0 20px rgba(205, 255, 0, 0.1);
+    transition: all 0.4s ease-out;
+    box-shadow: 0 0 0 2px #0F1F2E, 0 0 20px rgba(32, 178, 170, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.5s ease-out;
   }
 
   .btn-neon:hover {
-    box-shadow: 0 0 0 2px #0F1419, 0 0 30px rgba(205, 255, 0, 0.4);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 2px #0F1F2E, 0 0 40px rgba(32, 178, 170, 0.6);
+    transform: translateY(-3px);
+  }
+
+  .btn-neon:hover::before {
+    left: 100%;
+  }
+
+  .card-glass {
+    @apply p-8 rounded-lg border transition-all duration-300;
+    background: rgba(26, 47, 66, 0.7);
+    backdrop-filter: blur(10px);
+    border-color: rgba(32, 178, 170, 0.2);
+  }
+
+  .card-glass:hover {
+    background: rgba(26, 47, 66, 0.9);
+    border-color: rgba(32, 178, 170, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(32, 178, 170, 0.2);
+  }
+
+  .stagger-item {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .stagger-item:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-item:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-item:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-item:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-item:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #20B2AA 0%, #4A90E2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-accent {
+    color: #D4AF37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
 }
