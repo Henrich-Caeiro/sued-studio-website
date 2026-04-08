@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_9b8361e6.svg";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,14 +18,33 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisibleElements((prev) => new Set(prev).add(entry.target.id));
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".scroll-reveal").forEach((el) => {
+      observerRef.current?.observe(el);
+    });
+
+    return () => observerRef.current?.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-hidden">
       {/* Navegação */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"}`}>
         <div className="container flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm rounded">S</div>
-            <span className="font-bold text-lg">SUED</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src={LOGO_URL} 
+              alt="SUED Logo" 
+              className="h-10 w-auto logo-animated"
+            />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicos" className="text-sm hover:text-accent transition-colors">Serviços</a>
@@ -48,13 +71,22 @@ export default function Home() {
         <div className="absolute top-0 left-0 right-0 h-1 accent-bar" />
         
         <div className="relative z-10 container max-w-4xl text-center px-4">
+          {/* Logo Grande no Hero */}
+          <div className="mb-12 flex justify-center">
+            <img 
+              src={LOGO_URL} 
+              alt="SUED Logo" 
+              className="h-32 w-auto logo-animated animate-float"
+            />
+          </div>
+          
           <div className="mb-8 inline-block px-4 py-2 bg-accent/10 border border-accent rounded animate-fade-in-up">
             <span className="text-accent text-xs font-bold uppercase tracking-widest">Marketing Orientado por Dados</span>
           </div>
           
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             Redefinindo Marketing Através de
-            <span className="block text-accent mt-2">Precisão Algorítmica</span>
+            <span className="block text-accent mt-2 animate-glitch">Precisão Algorítmica</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
@@ -105,9 +137,14 @@ export default function Home() {
               }
             ].map((service, idx) => {
               const Icon = service.icon;
+              const elementId = `service-${idx}`;
               return (
-                <div key={idx} className="stagger-item group hover-lift p-8 border border-border rounded bg-background/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-accent/20 border border-accent mb-6 flex items-center justify-center rounded">
+                <div 
+                  key={idx} 
+                  id={elementId}
+                  className={`stagger-item group hover-lift p-8 border border-border rounded bg-background/50 transition-all duration-300 scroll-reveal interactive-card ${visibleElements.has(elementId) ? 'visible' : ''}`}
+                >
+                  <div className="w-12 h-12 bg-accent/20 border border-accent mb-6 flex items-center justify-center rounded animate-pulse-3d">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -134,15 +171,22 @@ export default function Home() {
               { title: "Autenticidade", description: "Conexão humana em um mercado saturado de IA" },
               { title: "Visão Celestial", description: "Vendo padrões invisíveis através de algoritmos" },
               { title: "Geometria Sagrada", description: "Harmonia entre tecnologia e humanidade" }
-            ].map((value, idx) => (
-              <div key={idx} className="stagger-item text-center">
-                <div className="w-16 h-16 bg-accent/10 border-2 border-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-accent">{idx + 1}</span>
+            ].map((value, idx) => {
+              const elementId = `value-${idx}`;
+              return (
+                <div 
+                  key={idx} 
+                  id={elementId}
+                  className={`stagger-item text-center scroll-reveal ${visibleElements.has(elementId) ? 'visible' : ''}`}
+                >
+                  <div className="w-16 h-16 bg-accent/10 border-2 border-accent rounded-full flex items-center justify-center mx-auto mb-6 animate-morph">
+                    <span className="text-2xl font-bold text-accent">{idx + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                  <p className="text-muted-foreground">{value.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -185,45 +229,46 @@ export default function Home() {
                 result: "Posicionamento como líder de mercado, 5x aumento em leads qualificados",
                 metrics: ["Líder Mercado", "+500% Leads", "4 meses"]
               }
-            ].map((study, idx) => (
-              <div 
-                key={idx} 
-                className="stagger-item group rounded-lg border border-border bg-background/50 overflow-hidden hover-lift transition-all duration-300"
-              >
-                {/* Card Header com Gradient */}
-                <div className="h-32 bg-gradient-to-br from-accent/20 to-secondary/20 border-b border-border p-6 flex flex-col justify-end">
-                  <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-                  <p className="text-sm text-muted-foreground">{study.client}</p>
-                </div>
-
-                {/* Card Content */}
-                <div className="p-6 space-y-4">
-                  <div>
-                    <p className="text-xs font-bold text-accent uppercase mb-1">Desafio</p>
-                    <p className="text-sm text-muted-foreground">{study.challenge}</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-xs font-bold text-accent uppercase mb-1">Solução</p>
-                    <p className="text-sm text-muted-foreground">{study.solution}</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-xs font-bold text-accent uppercase mb-1">Resultado</p>
-                    <p className="text-sm text-muted-foreground font-semibold">{study.result}</p>
+            ].map((study, idx) => {
+              const elementId = `study-${idx}`;
+              return (
+                <div 
+                  key={idx} 
+                  id={elementId}
+                  className={`stagger-item group rounded-lg border border-border bg-background/50 overflow-hidden hover-lift transition-all duration-300 scroll-reveal interactive-card ${visibleElements.has(elementId) ? 'visible' : ''}`}
+                >
+                  <div className="h-32 bg-gradient-to-br from-accent/20 to-secondary/20 border-b border-border p-6 flex flex-col justify-end animate-wave-reveal">
+                    <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
+                    <p className="text-sm text-muted-foreground">{study.client}</p>
                   </div>
 
-                  {/* Métricas */}
-                  <div className="pt-4 border-t border-border flex gap-2">
-                    {study.metrics.map((metric, i) => (
-                      <span key={i} className="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded">
-                        {metric}
-                      </span>
-                    ))}
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <p className="text-xs font-bold text-accent uppercase mb-1">Desafio</p>
+                      <p className="text-sm text-muted-foreground">{study.challenge}</p>
+                    </div>
+                    
+                    <div>
+                      <p className="text-xs font-bold text-accent uppercase mb-1">Solução</p>
+                      <p className="text-sm text-muted-foreground">{study.solution}</p>
+                    </div>
+                    
+                    <div>
+                      <p className="text-xs font-bold text-accent uppercase mb-1">Resultado</p>
+                      <p className="text-sm text-muted-foreground font-semibold">{study.result}</p>
+                    </div>
+
+                    <div className="pt-4 border-t border-border flex gap-2 flex-wrap">
+                      {study.metrics.map((metric, i) => (
+                        <span key={i} className="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded animate-shimmer">
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -299,9 +344,12 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm rounded">S</div>
-                <span className="font-bold text-lg">SUED Studio</span>
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src={LOGO_URL} 
+                  alt="SUED Logo" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-muted-foreground text-sm">Dados, Tecnologia & Estética Celestial</p>
             </div>
