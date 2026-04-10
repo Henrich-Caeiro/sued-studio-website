@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import HeroOverlay from "@/components/HeroOverlay";
 import { ServicesEffect, ValuesEffect, PortfolioEffect, FAQEffect, CTAEffect } from "@/components/SectionEffects";
+import { SplitText, GradientText, CharacterReveal } from "@/components/TextEffects";
 
 const Button = ({ children, className = "", variant = "default" }: any) => (
   <button className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -79,8 +80,12 @@ export default function Home() {
         
         <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="servicos-title">
-            <h2 className="text-5xl font-bold mb-4">Nossos Serviços</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Soluções de marketing orientadas por dados e precisão algorítmica</p>
+            <h2 className="text-5xl font-bold mb-4">
+              <SplitText text="Nossos Serviços" className="text-5xl font-bold" />
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <CharacterReveal text="Soluções de marketing orientadas por dados e precisão algorítmica" className="text-xl" />
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -108,20 +113,24 @@ export default function Home() {
         
         <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="valores-title">
-            <h2 className="text-5xl font-bold mb-4">Nossos Valores</h2>
-            <p className="text-xl text-muted-foreground">Princípios que guiam nossa jornada celestial</p>
+            <h2 className="text-5xl font-bold mb-4">
+              <SplitText text="Nossos Valores" className="text-5xl font-bold" />
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              <CharacterReveal text="Princípios que guiam nossa jornada celestial" className="text-xl" />
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Precisão Algorítmica", desc: "Cada decisão é fundamentada em dados, não em intuição" },
-              { title: "Autenticidade Radical", desc: "Transparência total em estratégias e resultados" },
-              { title: "Visão Celestial", desc: "Enxergamos além do horizonte do mercado" },
-              { title: "Geometria Sagrada", desc: "Harmonia perfeita entre dados e criatividade" }
-            ].map((valor, idx) => (
-              <div key={idx} className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border hover:border-accent/50 transition-all" id={`valor-${idx}`}>
-                <h3 className="text-2xl font-bold mb-3 text-accent">{valor.title}</h3>
-                <p className="text-muted-foreground">{valor.desc}</p>
+              { title: "Precisão", desc: "Cada decisão baseada em dados concretos e análise profunda" },
+              { title: "Autenticidade", desc: "Transparência total em estratégias e resultados" },
+              { title: "Visão Celestial", desc: "Pensamento estratégico de longo prazo e escalável" },
+              { title: "Geometria Sagrada", desc: "Harmonia entre arte, ciência e tecnologia" }
+            ].map((value, idx) => (
+              <div key={idx} className="scroll-reveal p-6 rounded-xl bg-card/40 border border-border text-center" id={`value-${idx}`}>
+                <h3 className="font-bold mb-2 text-accent">{value.title}</h3>
+                <p className="text-sm text-muted-foreground">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -136,20 +145,44 @@ export default function Home() {
         
         <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="portfolio-title">
-            <h2 className="text-5xl font-bold mb-4">Portfólio</h2>
-            <p className="text-xl text-muted-foreground">Histórias de transformação através de dados</p>
+            <h2 className="text-5xl font-bold mb-4">
+              <SplitText text="Portfólio" className="text-5xl font-bold" />
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              <CharacterReveal text="Histórias de transformação através de dados" className="text-xl" />
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "E-commerce Transformado", metrics: "+156% ROI", desc: "Otimização de funil de vendas com IA" },
-              { title: "SaaS Escalável", metrics: "-34% CAC", desc: "Redução de custo de aquisição através de dados" },
-              { title: "Consultoria Exponencial", metrics: "+500% Leads", desc: "Geração de leads qualificados com precisão" }
-            ].map((case_study, idx) => (
-              <div key={idx} className="scroll-reveal interactive-card p-8 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 hover:border-accent/50 transition-all" id={`case-${idx}`}>
-                <div className="text-3xl font-bold text-accent mb-2">{case_study.metrics}</div>
-                <h3 className="text-xl font-bold mb-2">{case_study.title}</h3>
-                <p className="text-muted-foreground">{case_study.desc}</p>
+              {
+                title: "E-commerce Premium",
+                metric: "+156%",
+                desc: "ROI em 6 meses",
+                detail: "Estratégia de marketing orientada por dados transformou um e-commerce tradicional em líder de mercado através de otimização de funil, personalização de conteúdo e automação inteligente."
+              },
+              {
+                title: "SaaS B2B",
+                metric: "-34%",
+                desc: "Redução de CAC",
+                detail: "Implementação de sistema de lead scoring e nurturing automático reduziu custo de aquisição enquanto aumentava qualidade dos clientes em 89%."
+              },
+              {
+                title: "Consultoria Digital",
+                metric: "+500%",
+                desc: "Aumento de leads",
+                detail: "Transformação completa da presença digital com conteúdo estratégico, SEO técnico e automação de marketing resultou em crescimento exponencial de leads qualificados."
+              }
+            ].map((project, idx) => (
+              <div key={idx} className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border hover:border-accent/50 transition-all" id={`portfolio-${idx}`}>
+                <div className="mb-4">
+                  <h3 className="font-bold text-lg mb-2">{project.title}</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-accent">{project.metric}</span>
+                    <span className="text-sm text-muted-foreground">{project.desc}</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">{project.detail}</p>
               </div>
             ))}
           </div>
@@ -164,20 +197,41 @@ export default function Home() {
         
         <div className="relative z-10 container max-w-3xl">
           <div className="text-center mb-16 scroll-reveal" id="faq-title">
-            <h2 className="text-5xl font-bold mb-4">Perguntas Frequentes</h2>
+            <h2 className="text-5xl font-bold mb-4">
+              <SplitText text="Perguntas Frequentes" className="text-5xl font-bold" />
+            </h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {[
-              { q: "Como começar com o SUED Studio?", a: "Entre em contato conosco para uma consulta inicial onde analisaremos suas necessidades e criaremos uma estratégia personalizada." },
-              { q: "Qual é o prazo para ver resultados?", a: "Resultados iniciais aparecem em 30 dias, mas transformações significativas ocorrem entre 90-180 dias." },
-              { q: "Como medem o sucesso?", a: "Utilizamos KPIs claros e mensuráveis: ROI, CAC, LTV, conversão e crescimento de receita." },
-              { q: "Quais setores vocês atendem?", a: "Atendemos e-commerce, SaaS, consultoria, tecnologia e qualquer negócio orientado por dados." },
-              { q: "Vocês oferecem suporte contínuo?", a: "Sim, oferecemos suporte 24/7 e otimizações contínuas das estratégias." }
-            ].map((item, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="scroll-reveal border border-border rounded-lg px-6" id={`faq-${idx}`}>
-                <AccordionTrigger className="hover:text-accent transition-colors">{item.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{item.a}</AccordionContent>
+              {
+                q: "Como vocês garantem ROI positivo?",
+                a: "Utilizamos metodologia baseada em dados com acompanhamento contínuo de KPIs. Cada estratégia é testada, medida e otimizada em tempo real para garantir resultados mensuráveis."
+              },
+              {
+                q: "Qual é o tempo médio para ver resultados?",
+                a: "Os primeiros resultados aparecem em 30 dias. Transformações significativas geralmente ocorrem entre 90-180 dias, dependendo da complexidade da estratégia."
+              },
+              {
+                q: "Vocês trabalham com empresas de qualquer tamanho?",
+                a: "Sim! Trabalhamos com startups, PMEs e grandes corporações. Adaptamos nossas soluções ao orçamento e objetivos específicos de cada cliente."
+              },
+              {
+                q: "Como é o processo de onboarding?",
+                a: "Começamos com auditoria completa, definição de KPIs, estratégia customizada e implementação faseada com relatórios semanais de progresso."
+              },
+              {
+                q: "Vocês oferecem suporte contínuo?",
+                a: "Sim, oferecemos suporte 24/7, otimizações contínuas e relatórios mensais detalhados. Você terá um gestor dedicado para sua conta."
+              }
+            ].map((faq, idx) => (
+              <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-lg px-4 scroll-reveal" id={`faq-${idx}`}>
+                <AccordionTrigger className="hover:text-accent transition-colors">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.a}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -192,41 +246,46 @@ export default function Home() {
         
         <div className="relative z-10 container text-center">
           <div className="scroll-reveal" id="cta-content">
-            <h2 className="text-5xl font-bold mb-6">Pronto para Transformar?</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial</p>
-            <Button className="text-lg px-8 py-4">Iniciar Jornada</Button>
+            <h2 className="text-5xl font-bold mb-6">
+              <GradientText>Pronto para Transformar?</GradientText>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial. Sua transformação digital começa aqui.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button className="text-lg px-8 py-4">Iniciar Jornada</Button>
+              <Button variant="outline" className="text-lg px-8 py-4">Agendar Consulta</Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-16">
+      <footer className="py-16 bg-background border-t border-border">
         <div className="container">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <p className="text-muted-foreground text-sm">Dados, Tecnologia & Estética Celestial</p>
+              <h3 className="font-bold mb-4">SUED Studio</h3>
+              <p className="text-sm text-muted-foreground">Transformando marketing digital através de precisão algorítmica e visão celestial.</p>
             </div>
-            
             <div>
-              <h4 className="font-bold mb-4">Produto</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-accent transition-colors">Serviços</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Portfólio</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Preços</a></li>
+              <h4 className="font-semibold mb-4">Navegação</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#servicos" className="text-muted-foreground hover:text-accent transition-colors">Serviços</a></li>
+                <li><a href="#valores" className="text-muted-foreground hover:text-accent transition-colors">Valores</a></li>
+                <li><a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors">Portfólio</a></li>
+                <li><a href="#faq" className="text-muted-foreground hover:text-accent transition-colors">FAQ</a></li>
               </ul>
             </div>
-            
             <div>
-              <h4 className="font-bold mb-4">Empresa</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-accent transition-colors">Sobre</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Contato</a></li>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="mailto:contato@sued.studio" className="text-muted-foreground hover:text-accent transition-colors">contato@sued.studio</a></li>
+                <li className="text-muted-foreground">São Paulo, Brasil</li>
               </ul>
             </div>
-            
             <div>
-              <h4 className="font-bold mb-4">Social</h4>
+              <h4 className="font-semibold mb-4">Social</h4>
               <div className="flex gap-4">
                 <a href="#" className="text-muted-foreground hover:text-accent transition-colors"><Linkedin size={20} /></a>
                 <a href="#" className="text-muted-foreground hover:text-accent transition-colors"><Twitter size={20} /></a>
@@ -234,7 +293,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
             <p>&copy; 2026 SUED Studio. Todos os direitos reservados.</p>
           </div>
