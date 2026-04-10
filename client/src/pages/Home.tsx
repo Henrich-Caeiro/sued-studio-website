@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import HeroThreeJS from "@/components/HeroThreeJS";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_9b8361e6.svg";
 
@@ -35,7 +36,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navegação */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"}`}>
         <div className="container flex items-center justify-between h-16">
@@ -56,21 +57,18 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Seção Hero */}
+      {/* Seção Hero com Three.js */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div className="absolute inset-0 constellation-bg" />
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/hero-celestial-data-3r8nwaBuBDT6UidqwvsHmv.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        {/* Three.js Canvas Background */}
+        <HeroThreeJS />
+
+        {/* Overlay para melhorar legibilidade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60 z-10" />
         
-        <div className="absolute top-0 left-0 right-0 h-1 accent-bar" />
+        <div className="absolute top-0 left-0 right-0 h-1 accent-bar z-20" />
         
-        <div className="relative z-10 container max-w-4xl text-center px-4">
+        {/* Conteúdo Hero */}
+        <div className="relative z-20 container max-w-4xl text-center px-4">
           {/* Logo Grande no Hero */}
           <div className="mb-12 flex justify-center">
             <img 
