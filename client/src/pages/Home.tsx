@@ -3,8 +3,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
+import SectionThreeJS from "@/components/SectionThreeJS";
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_9b8361e6.svg";
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_0215534f.svg";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -84,7 +85,7 @@ export default function Home() {
           
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             Redefinindo Marketing Através de
-            <span className="block text-accent mt-2 animate-glitch">Precisão Algorítmica</span>
+            <span className="block text-accent mt-2">Precisão Algorítmica</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
@@ -103,8 +104,9 @@ export default function Home() {
       </section>
 
       {/* Seção de Serviços */}
-      <section id="servicos" className="py-24 bg-card/50 relative">
+      <section id="servicos" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
+        <SectionThreeJS sectionId="servicos" particleColor="#20B2AA" particleCount={200} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">O Que Fazemos</h2>
@@ -155,8 +157,9 @@ export default function Home() {
       </section>
 
       {/* Seção de Valores */}
-      <section id="valores" className="py-24 relative">
+      <section id="valores" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
+        <SectionThreeJS sectionId="valores" particleColor="#4A90E2" particleCount={200} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Nossos Valores Centrais</h2>
@@ -190,8 +193,9 @@ export default function Home() {
       </section>
 
       {/* Seção de Portfólio */}
-      <section id="portfolio" className="py-24 bg-card/50 relative">
+      <section id="portfolio" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
+        <SectionThreeJS sectionId="portfolio" particleColor="#00D9FF" particleCount={250} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Portfólio de Sucesso</h2>
@@ -272,8 +276,9 @@ export default function Home() {
       </section>
 
       {/* Seção de FAQ */}
-      <section id="faq" className="py-24 relative">
+      <section id="faq" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
+        <SectionThreeJS sectionId="faq" particleColor="#D4AF37" particleCount={150} />
         <div className="container relative z-10 max-w-3xl">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Perguntas Frequentes</h2>
@@ -319,6 +324,7 @@ export default function Home() {
       {/* Seção CTA */}
       <section className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
+        <SectionThreeJS sectionId="cta" particleColor="#20B2AA" particleCount={300} />
         <div 
           className="absolute inset-0 opacity-15"
           style={{
