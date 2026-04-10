@@ -4,8 +4,7 @@ import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lu
 import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import ScrollReactiveThreeJS from "@/components/ScrollReactiveThreeJS";
-
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_51291435.svg";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,11 +41,7 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"}`}>
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img 
-              src={LOGO_URL} 
-              alt="SUED Logo" 
-              className="h-10 w-auto logo-animated"
-            />
+            <Logo className="h-10 w-auto logo-animated" />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicos" className="text-sm hover:text-accent transition-colors">Serviços</a>
@@ -72,11 +67,7 @@ export default function Home() {
         <div className="relative z-20 container max-w-4xl text-center px-4">
           {/* Logo Grande no Hero */}
           <div className="mb-12 flex justify-center">
-            <img 
-              src={LOGO_URL} 
-              alt="SUED Logo" 
-              className="h-32 w-auto logo-animated animate-float"
-            />
+            <Logo className="h-32 w-auto logo-animated animate-float" />
           </div>
           
           <div className="mb-8 inline-block px-4 py-2 bg-accent/10 border border-accent rounded animate-fade-in-up">
@@ -349,11 +340,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img 
-                  src={LOGO_URL} 
-                  alt="SUED Logo" 
-                  className="h-8 w-auto"
-                />
+                <Logo className="h-8 w-auto" />
               </div>
               <p className="text-muted-foreground text-sm">Dados, Tecnologia & Estética Celestial</p>
             </div>
