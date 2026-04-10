@@ -83,9 +83,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-4">
               <SplitText text="Nossos Serviços" className="text-5xl font-bold" />
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              <CharacterReveal text="Soluções de marketing orientadas por dados e precisão algorítmica" className="text-xl" />
-            </p>
+            <CharacterReveal text="Soluções de marketing orientadas por dados e precisão algorítmica" className="text-xl text-muted-foreground max-w-2xl mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -116,9 +114,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-4">
               <SplitText text="Nossos Valores" className="text-5xl font-bold" />
             </h2>
-            <p className="text-xl text-muted-foreground">
-              <CharacterReveal text="Princípios que guiam nossa jornada celestial" className="text-xl" />
-            </p>
+            <CharacterReveal text="Princípios que guiam nossa jornada celestial" className="text-xl text-muted-foreground" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -148,9 +144,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-4">
               <SplitText text="Portfólio" className="text-5xl font-bold" />
             </h2>
-            <p className="text-xl text-muted-foreground">
-              <CharacterReveal text="Histórias de transformação através de dados" className="text-xl" />
-            </p>
+            <CharacterReveal text="Histórias de transformação através de dados" className="text-xl text-muted-foreground" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -249,9 +243,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-6">
               <GradientText>Pronto para Transformar?</GradientText>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial. Sua transformação digital começa aqui.
-            </p>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial. Sua transformação digital começa aqui.</p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button className="text-lg px-8 py-4">Iniciar Jornada</Button>
               <Button variant="outline" className="text-lg px-8 py-4">Agendar Consulta</Button>
