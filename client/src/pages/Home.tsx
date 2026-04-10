@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import SectionThreeJS from "@/components/SectionThreeJS";
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_0215534f.svg";
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_51291435.svg";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
