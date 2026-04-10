@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
-import SectionThreeJS from "@/components/SectionThreeJS";
+import ScrollReactiveThreeJS from "@/components/ScrollReactiveThreeJS";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663477734151/fNskU7DdHnqyv9B8dr4RaX/sued-logo_51291435.svg";
 
@@ -106,7 +106,7 @@ export default function Home() {
       {/* Seção de Serviços */}
       <section id="servicos" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <SectionThreeJS sectionId="servicos" particleColor="#20B2AA" particleCount={200} />
+        <ScrollReactiveThreeJS sectionId="servicos" particleColor="#20B2AA" particleCount={200} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">O Que Fazemos</h2>
@@ -159,7 +159,7 @@ export default function Home() {
       {/* Seção de Valores */}
       <section id="valores" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <SectionThreeJS sectionId="valores" particleColor="#4A90E2" particleCount={200} />
+        <ScrollReactiveThreeJS sectionId="valores" particleColor="#4A90E2" particleCount={200} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Nossos Valores Centrais</h2>
@@ -195,7 +195,7 @@ export default function Home() {
       {/* Seção de Portfólio */}
       <section id="portfolio" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <SectionThreeJS sectionId="portfolio" particleColor="#00D9FF" particleCount={250} />
+        <ScrollReactiveThreeJS sectionId="portfolio" particleColor="#00D9FF" particleCount={250} />
         <div className="container relative z-10">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Portfólio de Sucesso</h2>
@@ -278,7 +278,7 @@ export default function Home() {
       {/* Seção de FAQ */}
       <section id="faq" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <SectionThreeJS sectionId="faq" particleColor="#D4AF37" particleCount={150} />
+        <ScrollReactiveThreeJS sectionId="faq" particleColor="#D4AF37" particleCount={150} />
         <div className="container relative z-10 max-w-3xl">
           <div className="mb-16">
             <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Perguntas Frequentes</h2>
@@ -324,7 +324,7 @@ export default function Home() {
       {/* Seção CTA */}
       <section className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <SectionThreeJS sectionId="cta" particleColor="#20B2AA" particleCount={300} />
+        <ScrollReactiveThreeJS sectionId="cta" particleColor="#20B2AA" particleCount={300} />
         <div 
           className="absolute inset-0 opacity-15"
           style={{
