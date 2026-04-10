@@ -2,8 +2,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
-import ScrollReactiveThreeJS from "@/components/ScrollReactiveThreeJS";
 import HeroOverlay from "@/components/HeroOverlay";
+import { ServicesEffect, ValuesEffect, PortfolioEffect, FAQEffect, CTAEffect } from "@/components/SectionEffects";
 
 const Button = ({ children, className = "", variant = "default" }: any) => (
   <button className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -74,7 +74,9 @@ export default function Home() {
       {/* Seção de Serviços */}
       <section id="servicos" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <ScrollReactiveThreeJS sectionId="servicos" particleColor="#20B2AA" particleCount={200} />
+        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+          <ServicesEffect />
+        </div>
         
         <div className="relative z-20 container">
           <div className="text-center mb-16 scroll-reveal" id="servicos-title">
@@ -102,7 +104,9 @@ export default function Home() {
       {/* Seção de Valores */}
       <section id="valores" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <ScrollReactiveThreeJS sectionId="valores" particleColor="#4A90E2" particleCount={200} />
+        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+          <ValuesEffect />
+        </div>
         
         <div className="relative z-20 container">
           <div className="text-center mb-16 scroll-reveal" id="valores-title">
@@ -129,7 +133,9 @@ export default function Home() {
       {/* Seção de Portfólio */}
       <section id="portfolio" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <ScrollReactiveThreeJS sectionId="portfolio" particleColor="#00D9FF" particleCount={250} />
+        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+          <PortfolioEffect />
+        </div>
         
         <div className="relative z-20 container">
           <div className="text-center mb-16 scroll-reveal" id="portfolio-title">
@@ -156,7 +162,9 @@ export default function Home() {
       {/* Seção FAQ */}
       <section id="faq" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <ScrollReactiveThreeJS sectionId="faq" particleColor="#D4AF37" particleCount={150} />
+        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+          <FAQEffect />
+        </div>
         
         <div className="relative z-20 container max-w-3xl">
           <div className="text-center mb-16 scroll-reveal" id="faq-title">
@@ -183,7 +191,9 @@ export default function Home() {
       {/* CTA Final */}
       <section className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 constellation-bg" />
-        <ScrollReactiveThreeJS sectionId="cta" particleColor="#20B2AA" particleCount={300} />
+        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+          <CTAEffect />
+        </div>
         
         <div className="relative z-20 container text-center">
           <div className="scroll-reveal" id="cta-content">
