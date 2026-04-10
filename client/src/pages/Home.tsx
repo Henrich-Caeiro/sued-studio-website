@@ -73,12 +73,11 @@ export default function Home() {
 
       {/* Seção de Serviços */}
       <section id="servicos" className="py-24 bg-card/50 relative overflow-hidden">
-        <div className="absolute inset-0 constellation-bg" />
-        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <ServicesEffect />
         </div>
         
-        <div className="relative z-20 container">
+        <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="servicos-title">
             <h2 className="text-5xl font-bold mb-4">Nossos Serviços</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Soluções de marketing orientadas por dados e precisão algorítmica</p>
@@ -103,12 +102,11 @@ export default function Home() {
 
       {/* Seção de Valores */}
       <section id="valores" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 constellation-bg" />
-        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <ValuesEffect />
         </div>
         
-        <div className="relative z-20 container">
+        <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="valores-title">
             <h2 className="text-5xl font-bold mb-4">Nossos Valores</h2>
             <p className="text-xl text-muted-foreground">Princípios que guiam nossa jornada celestial</p>
@@ -132,12 +130,11 @@ export default function Home() {
 
       {/* Seção de Portfólio */}
       <section id="portfolio" className="py-24 bg-card/50 relative overflow-hidden">
-        <div className="absolute inset-0 constellation-bg" />
-        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <PortfolioEffect />
         </div>
         
-        <div className="relative z-20 container">
+        <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="portfolio-title">
             <h2 className="text-5xl font-bold mb-4">Portfólio</h2>
             <p className="text-xl text-muted-foreground">Histórias de transformação através de dados</p>
@@ -161,12 +158,11 @@ export default function Home() {
 
       {/* Seção FAQ */}
       <section id="faq" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 constellation-bg" />
-        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <FAQEffect />
         </div>
         
-        <div className="relative z-20 container max-w-3xl">
+        <div className="relative z-10 container max-w-3xl">
           <div className="text-center mb-16 scroll-reveal" id="faq-title">
             <h2 className="text-5xl font-bold mb-4">Perguntas Frequentes</h2>
           </div>
@@ -190,12 +186,11 @@ export default function Home() {
 
       {/* CTA Final */}
       <section className="py-24 bg-card/50 relative overflow-hidden">
-        <div className="absolute inset-0 constellation-bg" />
-        <div className="absolute inset-0 z-0" style={{ height: '400px' }}>
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <CTAEffect />
         </div>
         
-        <div className="relative z-20 container text-center">
+        <div className="relative z-10 container text-center">
           <div className="scroll-reveal" id="cta-content">
             <h2 className="text-5xl font-bold mb-6">Pronto para Transformar?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial</p>
