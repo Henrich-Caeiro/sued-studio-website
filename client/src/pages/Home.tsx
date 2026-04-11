@@ -2,6 +2,7 @@ import { ChevronDown, Mail, Linkedin, Twitter } from "lucide-react";
 import { useState, useEffect } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import HeroOverlay from "@/components/HeroOverlay";
+import QuoteThreeJS from "@/components/QuoteThreeJS";
 
 const Button = ({ children, className = "", variant = "default" }: any) => (
   <button className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -88,38 +89,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção 2: Contexto de 2026 */}
-      <section id="mercado" className="py-24 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">O Contexto de 2026</h2>
-            <p className="text-xl text-muted-foreground">Dados, Autenticidade e IA Agêntica</p>
+      {/* Seção 2: Contexto de 2026 - Quote Style */}
+      <section id="mercado" className="relative w-full min-h-screen bg-background overflow-hidden flex items-center justify-center">
+        <QuoteThreeJS />
+        
+        <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center">
+          <div className="mb-12">
+            <p className="text-xl text-accent mb-4 font-semibold">O Contexto de 2026</p>
+            <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+              Dados, Autenticidade e IA Agêntica
+            </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Transformação Digital</h3>
-              <p className="text-lg text-muted-foreground mb-4">
+          <div className="space-y-12 mt-16">
+            <div className="backdrop-blur-sm bg-card/20 border border-border/30 rounded-2xl p-8 md:p-12">
+              <h3 className="text-3xl font-bold mb-6 text-accent">Transformação Digital</h3>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 Em 2026, o marketing digital terá passado por uma transformação onde a IA não é mais uma ferramenta de chat, mas um agente autônomo que toma decisões de compra e recomendações em nome dos usuários.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 As empresas vencedoras serão aquelas que constroem estratégias orientadas por desempenho, integrando SEO, mídia paga, CRM e branding em um único ecossistema alimentado por dados proprietários.
               </p>
             </div>
 
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Otimização de Mecanismos Generativos (GEO)</h3>
-              <p className="text-lg text-muted-foreground mb-4">
+            <div className="backdrop-blur-sm bg-card/20 border border-border/30 rounded-2xl p-8 md:p-12">
+              <h3 className="text-3xl font-bold mb-6 text-accent">Otimização de Mecanismos Generativos (GEO)</h3>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 O SUED Studio deve adotar o que se chama de Otimização de Mecanismos Generativos (GEO), onde a visibilidade não depende apenas de palavras-chave, mas de ser citado e legitimado como uma fonte confiável pelos sistemas de IA.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Isso exige uma infraestrutura de dados robusta e uma narrativa de marca que seja indiscutivelmente humana em sua essência, mesmo que tecnológica em sua entrega.
               </p>
             </div>
 
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Autenticidade como Diferencial</h3>
-              <p className="text-lg text-muted-foreground">
+            <div className="backdrop-blur-sm bg-card/20 border border-border/30 rounded-2xl p-8 md:p-12">
+              <h3 className="text-3xl font-bold mb-6 text-accent">Autenticidade como Diferencial</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Em um mercado saturado por conteúdos gerados por inteligência artificial, a busca por autenticidade e conexões humanas torna-se o principal diferencial competitivo para novas agências.
               </p>
             </div>
