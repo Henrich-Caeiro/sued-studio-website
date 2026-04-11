@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap } from "lucide-react";
+import { ChevronDown, Mail, Linkedin, Twitter, TrendingUp, Users, Zap, Sparkles } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import HeroOverlay from "@/components/HeroOverlay";
@@ -54,6 +54,7 @@ export default function Home() {
             {/* Logo will be added via HeroOverlay in hero section */}
           </div>
           <div className="hidden md:flex items-center gap-8">
+            <a href="#sobre" className="text-sm hover:text-accent transition-colors">Sobre</a>
             <a href="#servicos" className="text-sm hover:text-accent transition-colors">Serviços</a>
             <a href="#valores" className="text-sm hover:text-accent transition-colors">Valores</a>
             <a href="#portfolio" className="text-sm hover:text-accent transition-colors">Portfólio</a>
@@ -72,10 +73,49 @@ export default function Home() {
         <HeroOverlay />
       </section>
 
-      {/* Seção de Serviços */}
-      <section id="servicos" className="py-24 bg-card/50 relative overflow-hidden">
+      {/* Seção Sobre */}
+      <section id="sobre" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
           <ServicesEffect />
+        </div>
+        
+        <div className="relative z-10 container">
+          <div className="text-center mb-16 scroll-reveal" id="sobre-title">
+            <h2 className="text-5xl font-bold mb-4">
+              <SplitText text="Sobre o SUED Studio" className="text-5xl font-bold" />
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border">
+              <h3 className="text-2xl font-bold mb-4 text-accent">A Semiótica de SUED</h3>
+              <CharacterReveal 
+                text="SUED é um anagrama para Deus, refletindo a aspiração à verdade única proporcionada pelos dados proprietários. O conceito de Deus Ex Machina é recontextualizado: a máquina é o veículo que traz a solução para problemas complexos dos empreendedores." 
+                className="text-lg text-muted-foreground" 
+              />
+            </div>
+
+            <div className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Precisão Algorítmica</h3>
+              <p className="text-lg text-muted-foreground">
+                O SUED Studio propõe uma visão celestial do mercado, capaz de enxergar padrões invisíveis ao olho humano através de modelos de atribuição sofisticados e análise de valor de vida do cliente. A marca não se apresenta como religiosa, mas como sagrada em sua precisão e ética.
+              </p>
+            </div>
+
+            <div className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Autoridade em Primeiro Lugar</h3>
+              <p className="text-lg text-muted-foreground">
+                Em 2026, a visibilidade simples não é mais suficiente. O SUED Studio deve adotar um marketing de autoridade em primeiro lugar, onde cada insight é validado por modelos de IA e storytelling humano. Posicionando-se como o parceiro que remove o risco através da supervisão ética de sistemas de IA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Serviços */}
+      <section id="servicos" className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
+          <ValuesEffect />
         </div>
         
         <div className="relative z-10 container">
@@ -83,15 +123,15 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-4">
               <SplitText text="Nossos Serviços" className="text-5xl font-bold" />
             </h2>
-            <CharacterReveal text="Soluções de marketing orientadas por dados e precisão algorítmica" className="text-xl text-muted-foreground max-w-2xl mx-auto" />
+            <CharacterReveal text="Transformando dados em estratégia, complexidade em clareza" className="text-xl text-muted-foreground" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Zap, title: "Marketing Estratégico", desc: "Estratégias estruturadas e orientadas por dados" },
-              { icon: TrendingUp, title: "Inteligência de Dados", desc: "Análise profunda de métricas e comportamentos" },
-              { icon: Users, title: "Otimização IA", desc: "Algoritmos inteligentes para máxima conversão" },
-              { icon: Mail, title: "Autoridade de Marca", desc: "Posicionamento celestial no mercado" }
+              { icon: Zap, title: "Marketing de Autoridade", desc: "Cada insight validado por IA e storytelling humano" },
+              { icon: TrendingUp, title: "Dados Proprietários", desc: "Construindo crescimento que você possui: newsletters, comunidades, autoridade" },
+              { icon: Users, title: "Supervisão Ética de IA", desc: "Removendo risco através de sistemas de IA supervisionados eticamente" },
+              { icon: Sparkles, title: "Visão Celestial", desc: "Enxergando padrões invisíveis através de análise sofisticada de dados" }
             ].map((service, idx) => (
               <div key={idx} className="scroll-reveal interactive-card p-6 rounded-xl bg-card/40 border border-border hover:border-accent/50 transition-all" id={`service-${idx}`}>
                 <service.icon className="w-8 h-8 text-accent mb-4" />
@@ -104,9 +144,9 @@ export default function Home() {
       </section>
 
       {/* Seção de Valores */}
-      <section id="valores" className="py-24 relative overflow-hidden">
+      <section id="valores" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
-          <ValuesEffect />
+          <PortfolioEffect />
         </div>
         
         <div className="relative z-10 container">
@@ -114,18 +154,18 @@ export default function Home() {
             <h2 className="text-5xl font-bold mb-4">
               <SplitText text="Nossos Valores" className="text-5xl font-bold" />
             </h2>
-            <CharacterReveal text="Princípios que guiam nossa jornada celestial" className="text-xl text-muted-foreground" />
+            <CharacterReveal text="Geometria Sagrada, Tipografia de Autoridade e Interfaces Amigáveis" className="text-xl text-muted-foreground" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Precisão", desc: "Cada decisão baseada em dados concretos e análise profunda" },
-              { title: "Autenticidade", desc: "Transparência total em estratégias e resultados" },
-              { title: "Visão Celestial", desc: "Pensamento estratégico de longo prazo e escalável" },
-              { title: "Geometria Sagrada", desc: "Harmonia entre arte, ciência e tecnologia" }
+              { title: "Precisão", desc: "Transformando o caos informacional em ordem estruturada através de dados" },
+              { title: "Autenticidade", desc: "Honestidade, dúvida e imperfeição — traços que a IA pura não pode replicar" },
+              { title: "Visão Celestial", desc: "Vendo o destino manifesto de cada marca no cosmos comercial" },
+              { title: "Geometria Sagrada", desc: "Harmonia entre arte, ciência e tecnologia em cada ponto de contato" }
             ].map((value, idx) => (
               <div key={idx} className="scroll-reveal p-6 rounded-xl bg-card/40 border border-border text-center" id={`value-${idx}`}>
-                <h3 className="font-bold mb-2 text-accent">{value.title}</h3>
+                <h3 className="font-bold mb-2 text-accent text-lg">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.desc}</p>
               </div>
             ))}
@@ -134,59 +174,44 @@ export default function Home() {
       </section>
 
       {/* Seção de Portfólio */}
-      <section id="portfolio" className="py-24 bg-card/50 relative overflow-hidden">
+      <section id="portfolio" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
-          <PortfolioEffect />
+          <FAQEffect />
         </div>
         
         <div className="relative z-10 container">
           <div className="text-center mb-16 scroll-reveal" id="portfolio-title">
             <h2 className="text-5xl font-bold mb-4">
-              <SplitText text="Portfólio" className="text-5xl font-bold" />
+              <SplitText text="Modelo de Constelação" className="text-5xl font-bold" />
             </h2>
-            <CharacterReveal text="Histórias de transformação através de dados" className="text-xl text-muted-foreground" />
+            <CharacterReveal text="Transformando dados em mapas estelares de sucesso" className="text-xl text-muted-foreground" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "E-commerce Premium",
-                metric: "+156%",
-                desc: "ROI em 6 meses",
-                detail: "Estratégia de marketing orientada por dados transformou um e-commerce tradicional em líder de mercado através de otimização de funil, personalização de conteúdo e automação inteligente."
-              },
-              {
-                title: "SaaS B2B",
-                metric: "-34%",
-                desc: "Redução de CAC",
-                detail: "Implementação de sistema de lead scoring e nurturing automático reduziu custo de aquisição enquanto aumentava qualidade dos clientes em 89%."
-              },
-              {
-                title: "Consultoria Digital",
-                metric: "+500%",
-                desc: "Aumento de leads",
-                detail: "Transformação completa da presença digital com conteúdo estratégico, SEO técnico e automação de marketing resultou em crescimento exponencial de leads qualificados."
-              }
-            ].map((project, idx) => (
-              <div key={idx} className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border hover:border-accent/50 transition-all" id={`portfolio-${idx}`}>
-                <div className="mb-4">
-                  <h3 className="font-bold text-lg mb-2">{project.title}</h3>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-bold text-accent">{project.metric}</span>
-                    <span className="text-sm text-muted-foreground">{project.desc}</span>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground">{project.detail}</p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border" id="portfolio-1">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Constelações de Marca</h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                O SUED Studio não apenas analisa dados; ele cria um mapa para o sucesso. A metáfora da constelação transforma pontos isolados (dados) em padrões significativos (estratégia).
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Cada estrela representa um pilar: produto, preço, cliente, concorrentes e valores da empresa. Ao apresentar relatórios de mercado como mapas estelares, tornamos a análise de dados uma experiência inspiradora e menos intimidadora.
+              </p>
+            </div>
+
+            <div className="scroll-reveal p-8 rounded-xl bg-card/40 border border-border" id="portfolio-2">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Visualização Espacial</h3>
+              <p className="text-lg text-muted-foreground">
+                A visualização de dados baseada em metáforas espaciais ajuda os usuários a navegar em sistemas complexos usando sua memória espacial e intuição natural. Este modelo trata os usuários como agentes dinâmicos de mudança, onde a configuração das estrelas evolui conforme os dados fluem em tempo real.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Seção FAQ */}
-      <section id="faq" className="py-24 relative overflow-hidden">
+      <section id="faq" className="py-24 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
-          <FAQEffect />
+          <CTAEffect />
         </div>
         
         <div className="relative z-10 container max-w-3xl">
@@ -199,24 +224,24 @@ export default function Home() {
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                q: "Como vocês garantem ROI positivo?",
-                a: "Utilizamos metodologia baseada em dados com acompanhamento contínuo de KPIs. Cada estratégia é testada, medida e otimizada em tempo real para garantir resultados mensuráveis."
+                q: "O que significa SUED?",
+                a: "SUED é um anagrama para Deus, refletindo nossa aspiração à verdade única proporcionada pelos dados proprietários. Representa a onisciência analítica e a capacidade de transformar caos informacional em ordem estruturada."
               },
               {
-                q: "Qual é o tempo médio para ver resultados?",
-                a: "Os primeiros resultados aparecem em 30 dias. Transformações significativas geralmente ocorrem entre 90-180 dias, dependendo da complexidade da estratégia."
+                q: "Como o SUED Studio se diferencia em 2026?",
+                a: "Em um mercado saturado por conteúdo gerado por IA, buscamos autenticidade e conexões humanas. Combinamos rigor matemático com uma alma inspirada pelo divino, oferecendo supervisão ética de sistemas de IA."
               },
               {
-                q: "Vocês trabalham com empresas de qualquer tamanho?",
-                a: "Sim! Trabalhamos com startups, PMEs e grandes corporações. Adaptamos nossas soluções ao orçamento e objetivos específicos de cada cliente."
+                q: "Qual é o modelo de Constelação de Marca?",
+                a: "Transformamos dados isolados em padrões significativos. Cada estrela representa um pilar: produto, preço, cliente, concorrentes e valores. Apresentamos relatórios de mercado como mapas estelares, tornando a análise inspiradora e acessível."
               },
               {
-                q: "Como é o processo de onboarding?",
-                a: "Começamos com auditoria completa, definição de KPIs, estratégia customizada e implementação faseada com relatórios semanais de progresso."
+                q: "Como vocês garantem crescimento proprietário?",
+                a: "Em vez de depender de algoritmos de terceiros, ajudamos clientes a construir espaços que eles possuem: newsletters, comunidades privadas e autoridade de alta qualidade. Isso reduz dependência de plataformas externas."
               },
               {
-                q: "Vocês oferecem suporte contínuo?",
-                a: "Sim, oferecemos suporte 24/7, otimizações contínuas e relatórios mensais detalhados. Você terá um gestor dedicado para sua conta."
+                q: "Qual é a importância da Geometria Sagrada no design?",
+                a: "A Geometria Sagrada representa ordem divina manifestada na matemática. No SUED Studio, ela simboliza a estrutura complexa do mercado e a capacidade de enxergar padrões invisíveis através de análise sofisticada de dados."
               }
             ].map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-lg px-4 scroll-reveal" id={`faq-${idx}`}>
@@ -233,19 +258,21 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 bg-card/50 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ height: '100%' }}>
-          <CTAEffect />
+          <ServicesEffect />
         </div>
         
         <div className="relative z-10 container text-center">
           <div className="scroll-reveal" id="cta-content">
             <h2 className="text-5xl font-bold mb-6">
-              <GradientText>Pronto para Transformar?</GradientText>
+              <GradientText>Transforme Complexidade em Clareza</GradientText>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Deixe-nos redefinir seu marketing com precisão algorítmica e visão celestial. Sua transformação digital começa aqui.</p>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              No horizonte de 2026, onde a IA é a nova eletricidade, o SUED Studio atua como o condutor que ilumina o caminho dos empreendedores, transformando a complexidade em clareza absoluta e o potencial em presença eterna no mercado.
+            </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button className="text-lg px-8 py-4">Iniciar Jornada</Button>
+              <Button className="text-lg px-8 py-4">Começar Jornada Celestial</Button>
               <Button variant="outline" className="text-lg px-8 py-4">Agendar Consulta</Button>
             </div>
           </div>
@@ -258,15 +285,15 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <h3 className="font-bold mb-4">SUED Studio</h3>
-              <p className="text-sm text-muted-foreground">Transformando marketing digital através de precisão algorítmica e visão celestial.</p>
+              <p className="text-sm text-muted-foreground">A convergência entre dados, tecnologia e estética celestial. Transformando marketing digital através de precisão algorítmica e visão sagrada.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Navegação</h4>
               <ul className="space-y-2 text-sm">
+                <li><a href="#sobre" className="text-muted-foreground hover:text-accent transition-colors">Sobre</a></li>
                 <li><a href="#servicos" className="text-muted-foreground hover:text-accent transition-colors">Serviços</a></li>
                 <li><a href="#valores" className="text-muted-foreground hover:text-accent transition-colors">Valores</a></li>
                 <li><a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors">Portfólio</a></li>
-                <li><a href="#faq" className="text-muted-foreground hover:text-accent transition-colors">FAQ</a></li>
               </ul>
             </div>
             <div>
@@ -286,7 +313,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2026 SUED Studio. Todos os direitos reservados.</p>
+            <p>&copy; 2026 SUED Studio. Todos os direitos reservados. Transformando a complexidade em clareza absoluta.</p>
           </div>
         </div>
       </footer>
