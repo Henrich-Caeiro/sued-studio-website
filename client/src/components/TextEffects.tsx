@@ -11,6 +11,7 @@ export const TextReveal = ({ children, className = "" }: { children: string; cla
       ([entry]) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('text-reveal-active');
+          (entry.target as HTMLElement).style.opacity = '1';
         }
       },
       { threshold: 0.1 }
@@ -28,7 +29,7 @@ export const TextReveal = ({ children, className = "" }: { children: string; cla
       ref={ref}
       className={`text-reveal ${className}`}
       style={{
-        opacity: 0,
+        opacity: 1,
         animation: 'textRevealIn 0.8s ease-out forwards',
       }}
     >
@@ -50,6 +51,7 @@ export const SplitText = ({ text, className = "" }: { text: string; className?: 
           const words = ref.current?.querySelectorAll('.split-word');
           words?.forEach((word, idx) => {
             (word as HTMLElement).style.animation = `splitWordIn 0.6s ease-out ${idx * 0.1}s forwards`;
+            (word as HTMLElement).style.opacity = '1';
           });
         }
       },
@@ -72,7 +74,7 @@ export const SplitText = ({ text, className = "" }: { text: string; className?: 
           key={idx}
           className="split-word inline-block mr-2"
           style={{
-            opacity: 0,
+            opacity: 1,
             display: 'inline-block',
           }}
         >
@@ -113,6 +115,7 @@ export const CharacterReveal = ({ text, className = "" }: { text: string; classN
           const chars = ref.current?.querySelectorAll('.char');
           chars?.forEach((char, idx) => {
             (char as HTMLElement).style.animation = `charRevealIn 0.05s ease-out ${idx * 0.05}s forwards`;
+            (char as HTMLElement).style.opacity = '1';
           });
         }
       },
@@ -133,7 +136,7 @@ export const CharacterReveal = ({ text, className = "" }: { text: string; classN
           key={idx}
           className="char inline-block"
           style={{
-            opacity: 0,
+            opacity: 1,
           }}
         >
           {char === ' ' ? '\u00A0' : char}
