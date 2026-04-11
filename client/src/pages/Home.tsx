@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import HeroThreeJS from "@/components/HeroThreeJS";
 import HeroOverlay from "@/components/HeroOverlay";
 import QuoteThreeJS from "@/components/QuoteThreeJS";
+import ColorInteractionThreeJS from "@/components/ColorInteractionThreeJS";
 
 const Button = ({ children, className = "", variant = "default" }: any) => (
   <button className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -94,8 +95,11 @@ export default function Home() {
       </section>
 
       {/* Seção 3: Psicologia das Cores */}
-      <section id="cores" className="py-24 bg-card/50">
-        <div className="container">
+      <section id="cores" className="relative py-24 bg-background overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ColorInteractionThreeJS />
+        </div>
+        <div className="relative z-10 container">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Psicologia das Cores</h2>
             <p className="text-xl text-muted-foreground">Entre o Terrestre e o Celestial</p>

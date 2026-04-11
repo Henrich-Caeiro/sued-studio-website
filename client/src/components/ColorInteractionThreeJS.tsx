@@ -20,18 +20,19 @@ export default function ColorInteractionThreeJS() {
 
     // Create an interactive grid of points (Mesh)
     // Connor Love style: A grid that distorts based on mouse position
-    const width = 40;
-    const height = 40;
-    const size = 20;
+    const width = 60; // Increased density
+    const height = 60; // Increased density
+    const size = 25; // Increased size to cover more area
     const geometry = new THREE.PlaneGeometry(size, size, width, height);
     
     // We'll use a Points system for the "Celestial" feel
     const material = new THREE.PointsMaterial({
       color: 0x1DB5D8, // Transformative Teal
-      size: 0.05,
+      size: 0.08, // Slightly larger points
       transparent: true,
-      opacity: 0.4,
+      opacity: 0.7, // Higher opacity for visibility
       sizeAttenuation: true,
+      blending: THREE.AdditiveBlending, // Glow effect
     });
 
     const mesh = new THREE.Points(geometry, material);
@@ -146,8 +147,12 @@ export default function ColorInteractionThreeJS() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full opacity-60"
-      style={{ pointerEvents: 'none', zIndex: 0 }}
+      className="absolute inset-0 w-full h-full"
+      style={{ 
+        pointerEvents: 'none', 
+        zIndex: 1, // Above background but below content
+        mixBlendMode: 'screen' 
+      }}
     />
   );
 }
