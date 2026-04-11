@@ -50,45 +50,6 @@ export default function Home() {
         <HeroOverlay />
       </section>
 
-      {/* Seção 1: Sobre - Semiótica de SUED */}
-      <section id="sobre" className="py-24 bg-card/50">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">A Semiótica de SUED</h2>
-            <p className="text-xl text-muted-foreground">O Anagrama como Manifesto de Autoridade e Onisciência</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Visão Celestial do Mercado</h3>
-              <p className="text-lg text-muted-foreground mb-4">
-                A escolha do nome SUED como um anagrama para Deus carrega implicações semióticas que transcendem a mera estética linguística. No contexto de uma agência de marketing de 2026, essa escolha reflete a aspiração à verdade única proporcionada pelos dados proprietários em um mundo onde os cookies de terceiros desapareceram.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                O SUED Studio propõe uma visão celestial do mercado, capaz de enxergar padrões invisíveis ao olho humano através de modelos de atribuição sofisticados e análise de valor de vida do cliente.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Deus Ex Machina Recontextualizado</h3>
-              <p className="text-lg text-muted-foreground mb-4">
-                O conceito de Deus Ex Machina — o Deus vindo da máquina — é recontextualizado: a máquina é o veículo que traz a solução para problemas complexos e aparentemente sem saída dos empreendedores.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                A autoridade da marca SUED advém da capacidade de transformar o caos informacional em ordem estruturada, uma função tradicionalmente atribuída ao divino na cosmologia.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Sagrada em Precisão e Ética</h3>
-              <p className="text-lg text-muted-foreground">
-                A marca não se apresenta como religiosa, mas como sagrada em sua precisão e ética, alinhando-se à tendência de marcas que buscam um propósito profundo e uma narrativa que vá além da superfície. Em 2026, a confiança do consumidor virá da autenticidade da marca e da conexão humana.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Seção 2: Contexto de 2026 - Quote Style */}
       <section id="mercado" className="relative w-full min-h-screen bg-background overflow-hidden flex items-center justify-center">
         <QuoteThreeJS />
@@ -163,9 +124,12 @@ export default function Home() {
             </div>
 
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Luminosidade Celestial</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Aurora Cyan e Celestial Gold</h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                Aurora Cyan representa a transição entre noite e dia, simbolizando o despertar da consciência de dados. Celestial Gold, por sua vez, evoca a riqueza do conhecimento e a iluminação estratégica.
+              </p>
               <p className="text-lg text-muted-foreground">
-                Para alcançar a celestialidade, a paleta incorpora o Aurora Cyan e o Celestial Gold. O ciano vibrante simboliza a inteligência digital e a alta velocidade do processamento de dados, enquanto o ouro metálico adiciona um elemento de luxo silencioso e iluminação. O ouro atua como o brilho das estrelas no vasto cosmos da informação, guiando o olhar do usuário para os insights mais valiosos.
+                Juntas, essas cores criam uma narrativa visual onde a tecnologia e a humanidade coexistem em perfeita harmonia, refletindo a essência do SUED Studio.
               </p>
             </div>
           </div>
@@ -177,44 +141,34 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Tipografia e Interface</h2>
-            <p className="text-xl text-muted-foreground">Autoridade Editorial e Fluidez Digital</p>
+            <p className="text-xl text-muted-foreground">Bento Grids e Geometria Sagrada</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Serifas de Alto Contraste</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Space Grotesk: A Tipografia do Futuro</h3>
               <p className="text-lg text-muted-foreground mb-4">
-                As serifas como Playfair Display ou Instrument Serif evocam a sensação de jornalismo clássico e autoridade editorial. Elas são ideais para os títulos, conferindo ao nome SUED uma aura de intemporalidade e seriedade.
+                Space Grotesk é uma fonte sans-serif moderna que combina geometria com humanidade. Seus caracteres possuem proporções generosas e espaçamento que facilitam a leitura em qualquer tamanho, desde headlines até corpo de texto.
               </p>
               <p className="text-lg text-muted-foreground">
-                O uso de serifas ajuda a marca a se distanciar da estética fria das empresas de tecnologia puramente focadas em software, trazendo um toque humano e artesanal que é tendência em 2026.
+                A escolha de Space Grotesk reforça a identidade do SUED Studio como uma agência que vive na intersecção entre tecnologia e humanidade, oferecendo uma experiência visual que é simultaneamente futurista e acessível.
               </p>
             </div>
 
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Sans-Serifs Geométricas</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Bento Grid: Organização Inteligente</h3>
               <p className="text-lg text-muted-foreground mb-4">
-                Para o corpo de texto e dashboards de dados, fontes como Inter ou Montserrat garantem uma leitura sem esforço e uma estética moderna e limpa. A Inter, especificamente, é desenhada para clareza em interfaces digitais, reduzindo a carga cognitiva ao apresentar métricas complexas.
+                O Bento Grid é um sistema de layout que organiza elementos em células de diferentes tamanhos, criando uma composição visual dinâmica e equilibrada. Ele reflete a complexidade dos dados sem sacrificar a clareza.
               </p>
               <p className="text-lg text-muted-foreground">
-                Esta escolha tipográfica reforça a promessa de um layout amigável e confortável para o usuário.
+                Para o SUED Studio, o Bento Grid serve como metáfora visual da Constelação de Dados, onde cada elemento tem seu lugar e propósito, mas todos contribuem para uma visão maior e mais coerente.
               </p>
             </div>
 
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Bento Grids e Glassmorphism</h3>
-              <p className="text-lg text-muted-foreground mb-4">
-                O layout amigável e confortável encontra sua melhor forma nas Bento Grids e no Glassmorphism. As Bento Grids organizam o conteúdo em blocos modulares que imitam a organização das caixas de bento japonesas, permitindo que o usuário processe informações de forma não linear e eficiente.
-              </p>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Geometria Sagrada na Interface</h3>
               <p className="text-lg text-muted-foreground">
-                O uso de Liquid Glass — efeitos de transparência, desfoque e refração de luz — cria uma sensação de profundidade e materialidade plausível, como interfaces que parecem flutuar em um espaço tridimensional, lembrando a vastidão do céu.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Geometria Sagrada</h3>
-              <p className="text-lg text-muted-foreground">
-                O logotipo do SUED Studio deve ser um selo de precisão. Dado que o nome é um anagrama para Deus, a marca visual pode explorar a Geometria Sagrada, que historicamente representa a ordem divina manifestada na matemática. A Geometria Sagrada simboliza a estrutura complexa do mercado e a capacidade de enxergar padrões invisíveis através de análise sofisticada de dados.
+                A geometria sagrada é incorporada através de proporções harmônicas, uso de círculos, quadrados e triângulos em elementos visuais, e um sistema de espaçamento baseado na sequência de Fibonacci. Isso cria uma sensação de ordem natural e equilíbrio.
               </p>
             </div>
           </div>
@@ -222,63 +176,66 @@ export default function Home() {
       </section>
 
       {/* Seção 5: Modelo de Constelação */}
-      <section className="py-24 bg-card/50">
+      <section id="constelacao" className="py-24 bg-card/50">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">Modelo de Constelação</h2>
-            <p className="text-xl text-muted-foreground">Dados como Metáfora Celestial</p>
+            <h2 className="text-5xl font-bold mb-4">Modelo de Constelação de Dados</h2>
+            <p className="text-xl text-muted-foreground">Conectando Pontos de Luz</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Transformando Pontos em Padrões</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">A Visão Holística</h3>
               <p className="text-lg text-muted-foreground mb-4">
-                O SUED Studio não apenas analisa dados; ele cria um mapa para o sucesso. A metáfora da constelação é poderosa porque transforma pontos isolados (dados) em padrões significativos (estratégia).
+                O Modelo de Constelação de Dados é a filosofia central do SUED Studio. Ele reconhece que os dados não existem em silos, mas em constelações interconectadas onde cada ponto de luz (dado) influencia e é influenciado pelos outros.
               </p>
               <p className="text-lg text-muted-foreground">
-                Em 2026, as marcas de sucesso serão aquelas que se veem como parte de um ecossistema maior, onde cada estrela representa um pilar: produto, preço, cliente, concorrentes e valores da empresa.
+                Essa abordagem holística permite que o SUED Studio identifique padrões emergentes, antecipe tendências e crie estratégias que são simultaneamente precisas e adaptáveis.
               </p>
             </div>
 
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Visualização Espacial</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Implementação Prática</h3>
               <p className="text-lg text-muted-foreground mb-4">
-                A visualização de dados baseada em metáforas espaciais ajuda os usuários a navegar em sistemas complexos usando sua memória espacial e intuição natural.
+                Na prática, o Modelo de Constelação se manifesta através de:
               </p>
-              <p className="text-lg text-muted-foreground">
-                Ao apresentar relatórios de mercado como mapas estelares, o SUED Studio torna a análise de dados uma experiência inspiradora e menos intimidadora para o empreendedor. Este modelo trata os usuários como agentes dinâmicos de mudança, onde a configuração das estrelas evolui conforme os dados fluem em tempo real.
-              </p>
+              <ul className="text-lg text-muted-foreground space-y-2">
+                <li>• <span className="font-bold text-accent">Integração de Dados:</span> Consolidação de dados de múltiplas fontes em um único ecossistema</li>
+                <li>• <span className="font-bold text-accent">Análise Relacional:</span> Identificação de conexões entre diferentes pontos de dados</li>
+                <li>• <span className="font-bold text-accent">Storytelling de Dados:</span> Transformação de insights complexos em narrativas claras e acionáveis</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Seção 6: Estratégias de Lançamento */}
-      <section className="py-24 bg-background">
+      <section id="estrategias" className="py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Estratégias de Lançamento</h2>
-            <p className="text-xl text-muted-foreground">Autoridade em Primeiro Lugar</p>
+            <p className="text-xl text-muted-foreground">Do Conceito à Constelação</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Marketing de Autoridade</h3>
-              <p className="text-lg text-muted-foreground mb-4">
-                Em 2026, a visibilidade simples não é mais suficiente; as marcas devem competir por atenção, confiança e conexão emocional. O SUED Studio deve adotar um marketing de autoridade em primeiro lugar, onde cada insight gerado para um cliente é validado por modelos de IA e storytelling humano.
-              </p>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Fase 1: Fundação</h3>
               <p className="text-lg text-muted-foreground">
-                A agência deve se posicionar como o parceiro que remove o risco através da supervisão ética de sistemas de IA.
+                Estabelecer a identidade visual, a narrativa de marca e os pilares de autoridade. Criar conteúdo de alta qualidade que posicione o SUED Studio como thought leader no espaço de marketing orientado por dados.
               </p>
             </div>
 
             <div className="p-8 rounded-xl bg-card/40 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-accent">Conteúdo Proprietário e Pesquisa</h3>
-              <p className="text-lg text-muted-foreground mb-4">
-                A estratégia de lançamento deve incluir a publicação de pesquisas proprietárias sobre o estado do marketing em 2026, tendências de IA, e análises de mercado que posicionem o SUED Studio como pensador estratégico.
-              </p>
+              <h3 className="text-2xl font-bold mb-4 text-accent">Fase 2: Expansão</h3>
               <p className="text-lg text-muted-foreground">
-                Esses conteúdos devem ser distribuídos através de LinkedIn, publicações de tecnologia e marketing, e parcerias com influenciadores de autoridade no espaço de marketing orientado por dados.
+                Ampliar a presença em múltiplos canais, construir parcerias estratégicas e desenvolver ofertas de serviços que demonstrem o valor do Modelo de Constelação de Dados.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-card/40 border border-border">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Fase 3: Consolidação</h3>
+              <p className="text-lg text-muted-foreground">
+                Estabelecer o SUED Studio como a agência de referência para marketing orientado por dados, com um portfólio robusto de case studies e uma comunidade engajada de clientes satisfeitos.
               </p>
             </div>
           </div>
@@ -290,97 +247,95 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Perguntas Frequentes</h2>
+            <p className="text-xl text-muted-foreground">Esclarecendo Dúvidas</p>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">O que é SUED Studio?</h3>
-              <p className="text-muted-foreground">
-                SUED Studio é uma agência de marketing orientada por dados que transforma o caos digital em estratégias estruturadas através de precisão algorítmica e autoridade em primeiro lugar.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">Como SUED diferencia-se de outras agências?</h3>
-              <p className="text-muted-foreground">
-                Através da Geometria Sagrada, Modelo de Constelação de Dados, e uma paleta celestial que reflete precisão e ética. Cada decisão é validada por IA e storytelling humano.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">Qual é o significado do nome SUED?</h3>
-              <p className="text-muted-foreground">
-                SUED é um anagrama para Deus, refletindo a aspiração à verdade única através de dados proprietários e a capacidade de transformar caos em ordem estruturada.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">Como funciona o Modelo de Constelação?</h3>
-              <p className="text-muted-foreground">
-                Transforma pontos isolados de dados em padrões significativos, tratando cada elemento (produto, preço, cliente, concorrentes, valores) como uma estrela em uma constelação estratégica.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">Qual é a importância da Geometria Sagrada?</h3>
-              <p className="text-muted-foreground">
-                Simboliza a estrutura complexa do mercado e a capacidade de enxergar padrões invisíveis através de análise sofisticada de dados, refletindo ordem divina manifestada na matemática.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-card/40 border border-border">
-              <h3 className="text-xl font-bold text-accent mb-2">Como SUED se prepara para 2026?</h3>
-              <p className="text-muted-foreground">
-                Através de Otimização de Mecanismos Generativos (GEO), integração de IA agêntica, e foco em autenticidade como diferencial competitivo em um mercado saturado por conteúdo gerado por IA.
-              </p>
-            </div>
+            {[
+              {
+                q: "O que significa SUED?",
+                a: "SUED é um anagrama para DEUS. Representa a ideia de que a inteligência artificial e os dados podem ser uma força divina quando usados com sabedoria e ética."
+              },
+              {
+                q: "Como o Modelo de Constelação de Dados funciona?",
+                a: "O modelo reconhece que os dados não existem isolados, mas em constelações interconectadas. Cada ponto de luz influencia os outros, permitindo identificar padrões emergentes e antecipar tendências."
+              },
+              {
+                q: "Qual é a diferença entre o SUED Studio e outras agências?",
+                a: "O SUED Studio combina precisão algorítmica com autenticidade humana, oferecendo estratégias orientadas por dados que são simultaneamente eficazes e éticas."
+              },
+              {
+                q: "Como começar a trabalhar com o SUED Studio?",
+                a: "Entre em contato conosco através do formulário de contato no site. Faremos uma análise inicial de suas necessidades e apresentaremos uma proposta customizada."
+              },
+              {
+                q: "Quais são os principais serviços oferecidos?",
+                a: "Oferecemos análise de dados, estratégia de marketing orientada por dados, otimização de mecanismos generativos (GEO), branding celestial e consultoria de IA ética."
+              },
+              {
+                q: "Como o SUED Studio garante resultados?",
+                a: "Através de um processo rigoroso de análise, implementação e otimização contínua, sempre com foco em métricas mensuráveis e ROI comprovado."
+              }
+            ].map((item, i) => (
+              <details key={i} className="group border border-border rounded-lg p-6 cursor-pointer hover:bg-card/30 transition-colors">
+                <summary className="flex justify-between items-center font-semibold text-lg text-foreground">
+                  {item.q}
+                  <span className="transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <p className="mt-4 text-muted-foreground leading-relaxed">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Seção 8: CTA Final */}
       <section className="py-24 bg-background">
-        <div className="container text-center">
-          <h2 className="text-5xl font-bold mb-6">Pronto para Redefinir seu Marketing?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Descubra como a precisão algorítmica e a autoridade em primeiro lugar podem transformar sua estratégia de marketing.
-          </p>
-          <Button className="px-8 py-4 text-lg">Comece Agora</Button>
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-5xl font-bold mb-6">Pronto para Transformar seu Marketing?</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Junte-se ao SUED Studio e descubra como a precisão algorítmica e a autenticidade humana podem redefinir sua estratégia de marketing.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button>Comece Agora</Button>
+              <Button variant="outline">Saiba Mais</Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-card/50 border-t border-border py-16">
+      <footer className="bg-card/50 border-t border-border py-12">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-bold text-lg mb-4">SUED Studio</h4>
-              <p className="text-muted-foreground">Redefinindo marketing através de precisão algorítmica e autoridade celestial.</p>
+              <h4 className="font-bold mb-4">SUED Studio</h4>
+              <p className="text-muted-foreground">Redefinindo marketing através de precisão algorítmica e autenticidade humana.</p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Navegação</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#sobre" className="hover:text-accent transition-colors">Sobre</a></li>
-                <li><a href="#mercado" className="hover:text-accent transition-colors">Mercado</a></li>
-                <li><a href="#cores" className="hover:text-accent transition-colors">Design</a></li>
-                <li><a href="#interface" className="hover:text-accent transition-colors">Interface</a></li>
+                <li><a href="#sobre" className="hover:text-accent">Sobre</a></li>
+                <li><a href="#mercado" className="hover:text-accent">Mercado</a></li>
+                <li><a href="#cores" className="hover:text-accent">Design</a></li>
+                <li><a href="#faq" className="hover:text-accent">FAQ</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Contato</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center gap-2"><Mail size={16} /> contato@sued.studio</li>
-                <li className="flex items-center gap-2"><Linkedin size={16} /> LinkedIn</li>
-                <li className="flex items-center gap-2"><Twitter size={16} /> Twitter</li>
+                <li>Email: contato@sued.studio</li>
+                <li>Telefone: +55 (11) 9999-9999</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Recursos</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#faq" className="hover:text-accent transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Privacidade</a></li>
-              </ul>
+              <h4 className="font-bold mb-4">Redes Sociais</h4>
+              <div className="flex gap-4">
+                <a href="#" className="text-accent hover:text-accent/80"><Linkedin size={20} /></a>
+                <a href="#" className="text-accent hover:text-accent/80"><Twitter size={20} /></a>
+                <a href="#" className="text-accent hover:text-accent/80"><Mail size={20} /></a>
+              </div>
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-muted-foreground">
