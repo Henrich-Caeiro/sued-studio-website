@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import HeroThreeJS from "@/components/HeroThreeJS";
+import FloatingParticlesThreeJS from "@/components/FloatingParticlesThreeJS";
+import WaveThreeJS from "@/components/WaveThreeJS";
+import RotatingCubesThreeJS from "@/components/RotatingCubesThreeJS";
+import ConnectedSphereThreeJS from "@/components/ConnectedSphereThreeJS";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import Logo from "@/components/Logo";
 
 const Button = ({ children, className = "", variant = "default", href = "#" }: any) => (
@@ -64,30 +69,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO 2: CREDIBILIDADE */}
-      <section className="py-16 bg-card/30 border-y border-border">
-        <div className="container">
-          <p className="text-center text-muted-foreground mb-8">Empresas que cresceram com a SUED</p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">1</div>
-              <p className="text-sm text-muted-foreground">Cliente ativo</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">60+</div>
-              <p className="text-sm text-muted-foreground">Dias de parceria</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">+40</div>
-              <p className="text-sm text-muted-foreground">Agendamentos/semana</p>
-            </div>
+      {/* SEÇÃO 2: CREDIBILIDADE - BIG NUMBERS */}
+      <section className="py-24 bg-gradient-to-b from-card/20 to-background border-y border-border/50 relative overflow-hidden h-96">
+        {/* Three.js Background */}
+        <div className="absolute inset-0">
+          <FloatingParticlesThreeJS />
+        </div>
+        
+        {/* Background accent elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-celestial-cyan/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container relative z-10">
+          <p className="text-center text-muted-foreground mb-16 text-lg font-medium tracking-wide">Empresas que cresceram com a SUED</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 max-w-4xl mx-auto">
+            <AnimatedCounter end={1} label="Cliente ativo" />
+            <AnimatedCounter end={60} label="Dias de parceria" suffix="+" />
+            <AnimatedCounter end={40} label="Agendamentos/semana" suffix="+" />
           </div>
+          
+          {/* Divider line */}
+          <div className="mt-16 pt-12 border-t border-border/30"></div>
         </div>
       </section>
 
       {/* SEÇÃO 3: PROBLEMA */}
-      <section className="py-24">
-        <div className="container max-w-3xl">
+      <section className="py-24 relative overflow-hidden h-96">
+        {/* Three.js Background */}
+        <div className="absolute inset-0">
+          <WaveThreeJS />
+        </div>
+        
+        <div className="container max-w-3xl relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold mb-8">Ter um site não é o mesmo que ter presença digital.</h2>
           
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -105,8 +121,13 @@ export default function Home() {
       </section>
 
       {/* SEÇÃO 4: DIFERENCIAL */}
-      <section className="py-24 bg-card/30">
-        <div className="container">
+      <section className="py-24 bg-card/30 relative overflow-hidden h-96">
+        {/* Three.js Background */}
+        <div className="absolute inset-0">
+          <RotatingCubesThreeJS />
+        </div>
+        
+        <div className="container relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">A diferença está no ponto de partida.</h2>
           
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -142,8 +163,13 @@ export default function Home() {
       </section>
 
       {/* SEÇÃO 5: CASE */}
-      <section id="cases" className="py-24">
-        <div className="container max-w-3xl">
+      <section id="cases" className="py-24 relative overflow-hidden">
+        {/* Three.js Background */}
+        <div className="absolute inset-0 h-96">
+          <ConnectedSphereThreeJS />
+        </div>
+        
+        <div className="container max-w-3xl relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold mb-12">Resultado real, não portfólio bonito.</h2>
 
           <div className="backdrop-blur-sm bg-card/30 border border-border/30 rounded-2xl p-8 md:p-12 mb-8">
